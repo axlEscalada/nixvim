@@ -16,6 +16,14 @@
         yamlls = {
           enable = true;
         };
+        nixd.enable = true;
+        ruff-lsp.enable = true;
+        rust-analyzer = {
+          enable = true;
+          installCargo = true;
+          installRustc = true;
+        };
+        zls.enable = true;
       };
       keymaps = {
         silent = true;
