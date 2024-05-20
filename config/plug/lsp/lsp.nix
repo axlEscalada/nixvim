@@ -101,17 +101,15 @@
       border = _border
     }
 
+
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = false
-
     require'lspconfig'.gopls.setup {
       capabilities = capabilities,
     }
-
     require'lspconfig'.zls.setup {
       capabilities = capabilities,
     }
-
     require'lspconfig'.rust_analyzer.setup {
       capabilities = capabilities,
     }
