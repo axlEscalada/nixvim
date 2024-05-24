@@ -6,7 +6,7 @@
       servers = {
         eslint = {enable = true;};
         html = {enable = true;};
-        lua-ls = {enable = true;};
+        #lua-ls = {enable = true;};
         nil_ls = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
