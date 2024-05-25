@@ -56,7 +56,7 @@
     }
     {
       mode = "n";
-      key = "<leader>ghR";
+      key = "<leader>gr";
       action = ":Gitsigns reset_buffer<CR>";
       options = {
         silent = true;
@@ -70,6 +70,24 @@
       options = {
         silent = true;
         desc = "Stage Buffer";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gn";
+      action = ":Gitsigns next_hunk<CR>";
+      options = {
+        silent = true;
+        desc = "Next Hunk";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gp";
+      action = ":Gitsigns prev_hunk<CR>";
+      options = {
+        silent = true;
+        desc = "Prev Hunk";
       };
     }
   ];
