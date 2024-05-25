@@ -1,4 +1,6 @@
-{
+{pkgs, ...}: let
+  isMacOS = pkgs.stdenv.isDarwin;
+in {
   plugins = {
     lsp-format = {enable = true;};
     lsp = {
@@ -6,7 +8,7 @@
       servers = {
         eslint = {enable = true;};
         html = {enable = true;};
-        #lua-ls = {enable = true;};
+        lua-ls = {enable = !isMacOS;};
         nil_ls = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
