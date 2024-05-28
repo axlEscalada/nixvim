@@ -199,6 +199,8 @@
     }
   ];
   extraConfigLua = ''
+    vim.api.nvim_set_hl(0, 'TelescopeBorder', { bg='NONE', fg='#000000' })
+    vim.api.nvim_set_hl(0, 'TelescopePromptBorder', { bg='NONE', fg='#000000' })
     require("telescope").setup{
       pickers = {
         colorscheme = {
