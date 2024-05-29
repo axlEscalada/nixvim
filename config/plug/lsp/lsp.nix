@@ -6,6 +6,7 @@ in {
     lsp = {
       enable = true;
       servers = {
+        clangd = {enable = true;};
         eslint = {enable = true;};
         html = {enable = true;};
         lua-ls = {enable = !isMacOS;};
@@ -114,6 +115,9 @@ in {
     }
     require'lspconfig'.rust_analyzer.setup {
       capabilities = capabilities,
+    }
+    require'lspconfig'.clangd.setup {
+      cmd = { "clangd", "--offset-encoding=utf-16" },
     }
   '';
 }
