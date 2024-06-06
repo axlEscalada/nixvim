@@ -31,11 +31,11 @@ in {
       keymaps = {
         silent = true;
         lspBuf = {
-          gd = {
+          gld = {
             action = "definition";
             desc = "Goto Definition";
           };
-          gr = {
+          glr = {
             action = "references";
             desc = "Goto References";
           };
@@ -43,18 +43,18 @@ in {
             action = "declaration";
             desc = "Goto Declaration";
           };
-          gI = {
+          glI = {
             action = "implementation";
             desc = "Goto Implementation";
           };
-          gT = {
+          glT = {
             action = "type_definition";
             desc = "Type Definition";
           };
-          K = {
-            action = "hover";
-            desc = "Hover";
-          };
+          # K = {
+          #   action = "hover";
+          #   desc = "Hover";
+          # };
           "<leader>cw" = {
             action = "workspace_symbol";
             desc = "Workspace Symbol";
