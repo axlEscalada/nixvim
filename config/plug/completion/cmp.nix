@@ -63,14 +63,6 @@
     cmp-cmdline = {enable = false;}; # autocomplete for cmdline
   };
   extraConfigLua = ''
-          -- Abbr completion sueggestion
-          vim.api.nvim_set_hl(0, 'CmpItemAbbr', { bg='NONE', strikethrough=true, fg='#a877f7' })
-          vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', { bg='NONE', strikethrough=true, fg='#a877f7' })
-          -- Abbr completion already typped characters
-          vim.api.nvim_set_hl(0, 'CmpItemAbbrMatch', { bg='NONE', fg='#ede6e1' })
-          vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { link='CmpIntemAbbrMatch' })
-          -- Menu
-          vim.api.nvim_set_hl(0, 'CmpItemMenu', { bg='#bd4646', fg='#bd4646' })
           luasnip = require("luasnip")
           kind_icons = {
             Text = "󰊄",

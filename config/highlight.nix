@@ -7,6 +7,18 @@
 in {
   config = lib.mkIf config.colorschemes.base16.enable {
     highlight = {
+      Search = {
+        fg = "#FFFFFF";
+        bg = "#898CE8";
+      };
+      CurSearch = {
+        fg = "#000000";
+        bg = "#dda2de";
+      };
+      IncSearch = {
+        fg = "#000000";
+        bg = "#dda2de";
+      };
       CursorLine = {
         fg = "none";
         bg = "none";
@@ -26,9 +38,13 @@ in {
         fg = "none";
       };
 
+      TelescopeBorder = {
+        fg = "#1c1b1b";
+        bg = "none";
+      };
       TelescopePromptBorder = {
-        fg = colors.base01;
-        bg = colors.base01;
+        fg = "#1c1b1b";
+        bg = "none";
       };
       TelescopePromptNormal = {
         fg = "none";
@@ -38,7 +54,6 @@ in {
         fg = colors.base08;
         bg = colors.base01;
       };
-
       TelescopeSelection = {
         fg = "none";
         bg = colors.base01;
@@ -62,24 +77,30 @@ in {
       };
 
       CmpItemAbbrMatch = {
-        fg = colors.base05;
+        fg = "#ede6e1";
         bg = "none";
       };
       CmpItemAbbrMatchFuzzy = {
-        fg = colors.base05;
+        fg = "#ede6e1";
         bg = "none";
       };
       CmpItemAbbr = {
-        fg = colors.base03;
+        fg = "#a877f7";
         bg = "none";
+        strikethrough = true;
+      };
+      CmpItemAbbrDeprecated = {
+        fg = "#a877f7";
+        bg = "none";
+        strikethrough = true;
       };
       CmpItemKind = {
         fg = colors.base0E;
         bg = "none";
       };
       CmpItemMenu = {
-        fg = colors.base0E;
-        bg = "none";
+        fg = "#bd4646";
+        bg = "#bd4646";
       };
       CmpItemKindSnippet = {
         fg = colors.base0E;
