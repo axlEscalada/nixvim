@@ -87,12 +87,12 @@ in {
       CmpItemAbbr = {
         fg = "#a877f7";
         bg = "none";
-        strikethrough = true;
+        strikethrough = false;
       };
       CmpItemAbbrDeprecated = {
         fg = "#a877f7";
         bg = "none";
-        strikethrough = true;
+        strikethrough = false;
       };
       CmpItemKind = {
         fg = colors.base0E;
