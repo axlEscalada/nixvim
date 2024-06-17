@@ -7,6 +7,9 @@
 in {
   config = lib.mkIf config.colorschemes.base16.enable {
     highlight = {
+      Comment = {
+        fg = "#5d5d5d";
+      };
       Search = {
         fg = "#FFFFFF";
         bg = "#898CE8";
@@ -146,7 +149,7 @@ in {
         fg = colors.base0D;
       };
       TSComment = {
-        fg = colors.base02;
+        fg = "#5d5d5d";
         italic = true;
       };
       TSConditional = {
