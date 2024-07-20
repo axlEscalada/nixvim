@@ -10,6 +10,7 @@ in {
         eslint = {enable = true;};
         html = {enable = true;};
         lua-ls = {enable = !isMacOS;};
+        zls = {enable = !isMacOS;};
         nil-ls = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
@@ -26,7 +27,7 @@ in {
           installCargo = true;
           installRustc = true;
         };
-        zls.enable = true;
+        # zls.enable = true;
       };
       keymaps = {
         silent = true;
@@ -111,7 +112,7 @@ in {
       capabilities = capabilities,
     }
     require'lspconfig'.zls.setup {
-      capabilities = capabilities,
+       capabilities = capabilities,
     }
     require'lspconfig'.rust_analyzer.setup {
       capabilities = capabilities,
