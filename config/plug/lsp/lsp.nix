@@ -10,7 +10,8 @@ in {
         eslint = {enable = true;};
         html = {enable = true;};
         lua-ls = {enable = !isMacOS;};
-        zls = {enable = !isMacOS;};
+        #disable zls here to avoid build zig and zls when nixvim is building, instead i use zls from system
+        # zls = {enable = !isMacOS;};
         nil-ls = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
@@ -113,6 +114,9 @@ in {
     }
     require'lspconfig'.zls.setup {
        capabilities = capabilities,
+       flags = {
+         debounce_text_changes = 150,
+       }
     }
     require'lspconfig'.rust_analyzer.setup {
       capabilities = capabilities,
