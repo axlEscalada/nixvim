@@ -51,6 +51,7 @@
     ./plug/utils/hardtime.nix
     #./plug/utils/harpoon.nix
     ./plug/utils/grapple.nix
+    ./plug/utils/leetcode.nix
     ./plug/utils/illuminate.nix
     ./plug/utils/nvim-autopairs.nix
     ./plug/utils/obsidian.nix
