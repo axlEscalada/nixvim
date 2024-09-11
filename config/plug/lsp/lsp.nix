@@ -2,33 +2,50 @@
   isMacOS = pkgs.stdenv.isDarwin;
 in {
   plugins = {
-    lsp-format = {enable = true;};
+    lsp-format = {
+      enable = true;
+    };
     lsp = {
       enable = true;
       servers = {
-        clangd = {enable = true;};
-        eslint = {enable = true;};
-        html = {enable = true;};
-        lua-ls = {enable = !isMacOS;};
-        #disable zls here to avoid build zig and zls when nixvim is building, instead i use zls from system
-        # zls = {enable = !isMacOS;};
-        nil-ls = {enable = true;};
-        marksman = {enable = true;};
-        pyright = {enable = true;};
-        gopls = {enable = true;};
-        terraformls = {enable = true;};
-        tsserver = {enable = false;};
-        yamlls = {
+        clangd = {
+            enable = true;
+        };
+        html = {
           enable = true;
         };
-        nixd.enable = true;
+        #disable zls here to avoid build zig and zls when nixvim is building, instead i use zls from system
+        # zls = {enable = !isMacOS;};
+        lua-ls = {
+          enable = true;
+        };
+        nil-ls = {
+          enable = true;
+        };
+        nixd = {
+          enable = true;
+        };
+        marksman = {
+          enable = true;
+        };
+        pyright = {
+          enable = true;
+        };
+        gopls = {
+          enable = true;
+        };
+        terraformls = {
+          enable = true;
+        };
         ruff-lsp.enable = true;
         rust-analyzer = {
           enable = true;
           installCargo = true;
           installRustc = true;
         };
-        # zls.enable = true;
+        yamlls = {
+          enable = true;
+        };
       };
       keymaps = {
         silent = true;

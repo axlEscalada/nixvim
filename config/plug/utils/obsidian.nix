@@ -1,6 +1,7 @@
+{ lib, ... }:
 {
   plugins.obsidian = {
-    enable = true;
+    enable = lib.mkDefault false;
     settings = {
       completion = {
         min_chars = 2;
@@ -40,27 +41,77 @@
         substitutions = {
           monday.__raw = ''
             function()
-             return os.date("*t").wday == 2
+                -- Get the current date
+                local currentDate = os.date("*t")
+
+                -- Calculate the difference in days to the first day of the week (Monday)
+                local diff = (currentDate.wday + 5) % 7
+
+                -- Subtract the difference to get the date of the first day of the week
+                currentDate.day = currentDate.day - diff
+
+                -- Return the date of the first day of the week
+                return os.date("%Y-%m-%d", os.time(currentDate))
             end
           '';
           tuesday.__raw = ''
             function()
-             return os.date("*t").wday == 3
+                -- Get the current date
+                local currentDate = os.date("*t")
+
+                -- Calculate the difference in days to the first day of the week (Monday)
+                local diff = (currentDate.wday + 4) % 7
+
+                -- Subtract the difference to get the date of the first day of the week
+                currentDate.day = currentDate.day - diff
+
+                -- Return the date of the first day of the week
+                return os.date("%Y-%m-%d", os.time(currentDate))
             end
           '';
           wednesday.__raw = ''
             function()
-             return os.date("*t").wday == 4
+                -- Get the current date
+                local currentDate = os.date("*t")
+
+                -- Calculate the difference in days to the first day of the week (Monday)
+                local diff = (currentDate.wday + 3) % 7
+
+                -- Subtract the difference to get the date of the first day of the week
+                currentDate.day = currentDate.day - diff
+
+                -- Return the date of the first day of the week
+                return os.date("%Y-%m-%d", os.time(currentDate))
             end
           '';
           thursday.__raw = ''
             function()
-             return os.date("*t").wday == 5
+                -- Get the current date
+                local currentDate = os.date("*t")
+
+                -- Calculate the difference in days to the first day of the week (Monday)
+                local diff = (currentDate.wday + 2) % 7
+
+                -- Subtract the difference to get the date of the first day of the week
+                currentDate.day = currentDate.day - diff
+
+                -- Return the date of the first day of the week
+                return os.date("%Y-%m-%d", os.time(currentDate))
             end
           '';
           friday.__raw = ''
             function()
-             return os.date("*t").wday == 6
+                -- Get the current date
+                local currentDate = os.date("*t")
+
+                -- Calculate the difference in days to the first day of the week (Monday)
+                local diff = (currentDate.wday + 1) % 7
+
+                -- Subtract the difference to get the date of the first day of the week
+                currentDate.day = currentDate.day - diff
+
+                -- Return the date of the first day of the week
+                return os.date("%Y-%m-%d", os.time(currentDate))
             end
           '';
         };
