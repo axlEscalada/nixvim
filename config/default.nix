@@ -9,8 +9,8 @@
     ./plug/colorscheme/colorscheme.nix
 
     ./plug/completion/cmp.nix
-    ./plug/completion/codecompanion.nix
-    ./plug/completion/copilot-cmp.nix
+    #./plug/completion/codecompanion.nix
+    #./plug/completion/copilot-cmp.nix
     ./plug/completion/lspkind.nix
     ./plug/completion/schemastore.nix
 
@@ -48,10 +48,10 @@
     ./plug/utils/harpoon.nix
     ./plug/utils/comment.nix
     ./plug/utils/comment-box.nix
-    ./plug/utils/flash.nix
-    ./plug/utils/grapple.nix
-    ./plug/utils/hardtime.nix
-    ./plug/utils/leetcode.nix
+    #./plug/utils/flash.nix
+    #./plug/utils/grapple.nix
+    #./plug/utils/hardtime.nix
+    #./plug/utils/leetcode.nix
     ./plug/utils/illuminate.nix
     ./plug/utils/markview.nix
     ./plug/utils/mini.nix
@@ -67,6 +67,7 @@
       default = lib.mkDefault "paradise";
       type = lib.types.enum [
         "paradise"
+        "paradise-custom"
         "decay"
         "edge-dark"
         "mountain"

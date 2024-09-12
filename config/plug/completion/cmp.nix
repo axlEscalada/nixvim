@@ -8,10 +8,11 @@
       settings = {
         autoEnableSources = true;
         experimental = {
-          ghost_text = true;
+          ghost_text = false;
         };
         performance = {
-          debounce = 60;
+          debounce = 300;
+          throttle = 120;
           fetchingTimeout = 200;
           maxViewEntries = 30;
         };
@@ -28,12 +29,12 @@
         sources = [
           { name = "nvim_lsp"; }
           { name = "emoji"; }
-          {
-            name = "buffer"; # text within current buffer
-            option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
-            keywordLength = 3;
-          }
-          { name = "copilot"; }
+          # disable this because is really annoying completion for text that is not in lsp scope
+          #{
+          #  name = "buffer"; # text within current buffer
+          #  option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
+          #  keywordLength = 3;
+          #}
           {
             name = "path"; # file system paths
             keywordLength = 3;
@@ -42,9 +43,6 @@
             name = "luasnip"; # snippets
             keywordLength = 3;
           }
-          { name = "rg"; }
-          { name = "nvim_lua"; }
-
         ];
 
         window = {
@@ -90,7 +88,7 @@
       enable = true;
     }; # snippets
     cmp-cmdline = {
-      enable = true;
+      enable = false;
     }; # autocomplete for cmdline
   };
   extraConfigLua = ''
@@ -121,7 +119,7 @@
             Event = "",
             Operator = "",
             TypeParameter = "",
-          } 
+          }
 
            local cmp = require'cmp'
 

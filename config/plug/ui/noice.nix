@@ -23,7 +23,13 @@
       backend = "nui";
     };
     cmdline = {
+      view = "cmdline";
       format = {
+        cmdline = {
+          pattern = "^:";
+          icon = ">";
+          lang = "vim";
+        };
         filter = {
           pattern = [
             ":%s*%%s*s:%s*"

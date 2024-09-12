@@ -24,6 +24,9 @@
     number = false;
     relativenumber = true;
 
+    # Wider cursor in all modes
+    guicursor = "n-v-c-sm:block,i-ci-ve:block,r-cr-o:block";
+
     # Set tabs to 2 spaces
     tabstop = 2;
     softtabstop = 2;

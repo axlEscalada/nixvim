@@ -21,7 +21,7 @@ in
         "                                                               "
         "                                                               "
         "                                                               "
-        "                       git@github.com:elythh                   "
+        "                                                               "
       ];
     in
     {
