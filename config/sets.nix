@@ -21,7 +21,7 @@
   };
   opts = {
     # Enable relative line numbers
-    number = false;
+    number = true;
     relativenumber = true;
 
     # Wider cursor in all modes

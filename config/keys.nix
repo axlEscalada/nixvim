@@ -5,7 +5,7 @@
     # General maps
     {
       mode = "n";
-      key = "<leader>/";
+      key = "<leader>?";
       action = "<cmd>nohl<CR>";
     }
     {
@@ -411,6 +411,14 @@
       action = "<CMD>bprev<CR>";
       options = {
         desc = "Previous buffer";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>bd";
+      action = "<CMD>bdelete<CR>";
+      options = {
+        desc = "Delete buffer";
       };
     }
   ];

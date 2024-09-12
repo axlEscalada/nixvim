@@ -41,19 +41,13 @@
           desc = "Command History";
         };
       };
-      "<leader>b" = {
-        action = "buffers";
-        options = {
-          desc = "+buffer";
-        };
-      };
       "<leader>ff" = {
         action = "find_files";
         options = {
           desc = "Find project files";
         };
       };
-      "<leader>fr" = {
+      "<leader>/" = {
         action = "live_grep";
         options = {
           desc = "Find text";
