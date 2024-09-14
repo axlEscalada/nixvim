@@ -1,6 +1,8 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   isMacOS = pkgs.stdenv.isDarwin;
-in {
+in
+{
   plugins = {
     lsp-format = {
       enable = true;
@@ -9,7 +11,7 @@ in {
       enable = true;
       servers = {
         clangd = {
-            enable = true;
+          enable = true;
         };
         html = {
           enable = true;
@@ -44,6 +46,12 @@ in {
           installRustc = true;
         };
         yamlls = {
+          enable = true;
+        };
+        elixirls = {
+          enable = true;
+        };
+        gleam = {
           enable = true;
         };
       };
