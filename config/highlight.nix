@@ -21,6 +21,12 @@ in
         bg = "#dda2de";
       };
 
+      # Dap debug
+      DapStopped = {
+        fg = "none";
+        bg = "#333333";
+      };
+
       # Mini tabline
       MiniTablineCurrent = {
         bg = "none";
