@@ -11,6 +11,7 @@
 
       formatters_by_ft = {
         liquidsoap = [ "liquidsoap-prettier" ];
+        go = [ "goimports" "gofmt" ];
         html = [
           [
             "prettierd"
