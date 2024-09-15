@@ -1,8 +1,22 @@
 { config, ... }:
+let
+  highlights = import ./highlight.nix;
+in
 {
   colorschemes = {
-    base16 = {
+    rose-pine = {
       enable = true;
+      settings = {
+        styles = {
+          bold = false;
+          italic = true;
+          transparency = true;
+        };
+        highlight_groups = highlights;
+      };
+    };
+    base16 = {
+      enable = false;
       setUpBar = false;
       colorscheme = import ../../colors/${config.theme}.nix { };
       settings = {
