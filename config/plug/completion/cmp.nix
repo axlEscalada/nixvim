@@ -28,7 +28,8 @@
         };
         sources = [
           { name = "nvim_lsp"; }
-          { name = "emoji"; }
+          # disable this because is annoying when use : for pattern matching in some languages
+          #{ name = "emoji"; }
           # disable this because is really annoying completion for text that is not in lsp scope
           #{
           #  name = "buffer"; # text within current buffer
