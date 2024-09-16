@@ -146,8 +146,9 @@ in
     require'lspconfig'.rust_analyzer.setup {
       capabilities = capabilities,
     }
+
     require'lspconfig'.clangd.setup {
-      cmd = { "clangd", "--offset-encoding=utf-16" },
+       cmd = { "clangd", "--offset-encoding=utf-16" },
     }
   '';
 }
