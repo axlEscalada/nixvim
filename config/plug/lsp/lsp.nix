@@ -54,6 +54,9 @@ in
         gleam = {
           enable = true;
         };
+        tsserver = {
+          enable = true;
+        };
       };
       keymaps = {
         silent = true;
