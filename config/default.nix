@@ -14,6 +14,8 @@
     ./plug/completion/lspkind.nix
     ./plug/completion/schemastore.nix
 
+    ./plug/debug/dap.nix
+
     ./plug/git/gitlinker.nix
     ./plug/git/diffview.nix
     ./plug/git/gitsigns.nix
