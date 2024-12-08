@@ -5,7 +5,7 @@ in
 {
   colorschemes = {
     rose-pine = {
-      enable = true;
+      enable = false;
       settings = {
         styles = {
           bold = false;
@@ -16,7 +16,7 @@ in
       };
     };
     base16 = {
-      enable = false;
+      enable = true;
       setUpBar = false;
       colorscheme = import ../../colors/${config.theme}.nix { };
       settings = {

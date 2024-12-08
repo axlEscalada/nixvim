@@ -45,7 +45,7 @@
     ./plug/ui/bufferline.nix
     ./plug/ui/dressing.nix
     ./plug/ui/indent-blankline.nix
-    #./plug/ui/noice.nix
+    ./plug/ui/noice.nix
     ./plug/ui/nvim-notify.nix
     #./plug/ui/precognition.nix
     ./plug/ui/telescope.nix
@@ -76,6 +76,7 @@
         "gotham"
         "oxocarbon"
         "rosepine"
+        "hardcore"
         "decay"
         "edge-dark"
         "mountain"
@@ -97,7 +98,7 @@
   };
   config = {
     # The base16 theme to use, if you want to use another theme, change it in colorscheme.nix
-    theme = "rosepine";
+    theme = "paradise-custom";
     extraConfigLua = ''
       _G.theme = "${config.theme}"
     '';
