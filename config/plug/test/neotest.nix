@@ -4,6 +4,9 @@
     treesitter.enable = true;
     neotest = {
       enable = true;
+      package = pkgs.vimPlugins.neotest.overrideAttrs (old: {
+        version = "2024-01-01"; # Use a known working version
+      });
       adapters.golang = {
         enable = true;
         settings = {
