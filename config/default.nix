@@ -65,7 +65,8 @@
     ./plug/utils/ufo.nix
     ./plug/utils/undotree.nix
     ./plug/utils/whichkey.nix
-    ./plug/utils/yaml-companion.nix
+    ./plug/utils/avante.nix
+    # ./plug/utils/yaml-companion.nix
   ];
   options = {
     theme = lib.mkOption {
