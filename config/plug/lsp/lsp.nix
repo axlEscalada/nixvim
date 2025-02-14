@@ -57,6 +57,9 @@ in
         tsserver = {
           enable = true;
         };
+        sourcekit = {
+          enable = true;
+        };
       };
       keymaps = {
         silent = true;
