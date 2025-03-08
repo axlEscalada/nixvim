@@ -4,6 +4,7 @@
     settings = {
       provider = "gemini";
       gemini = {
+        # model = "gemini-2.0-pro-exp-02-05";
         model = "gemini-2.0-flash";
         # model = "gemini-1.5-pro";
         temperature = 0;

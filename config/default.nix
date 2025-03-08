@@ -66,6 +66,7 @@
     ./plug/utils/undotree.nix
     ./plug/utils/whichkey.nix
     ./plug/utils/avante.nix
+    ./plug/utils/codecompanion.nix
     # ./plug/utils/yaml-companion.nix
   ];
   options = {
