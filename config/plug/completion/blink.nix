@@ -11,20 +11,20 @@
   plugins = {
     # blink-cmp-dictionary.enable = true;
     # blink-cmp-spell.enable = true;
-    # blink-cmp-git.enable = true;
+    blink-cmp-git.enable = true;
     blink-emoji.enable = true;
-    # blink-ripgrep.enable = true;
+    blink-ripgrep.enable = true;
     blink-cmp = {
       enable = true;
       setupLspCapabilities = true;
 
       settings = {
         keymap = {
-          preset = "enter";
-          mapping = {
-            # "<Tab>" = [ "accept" "fallback" ];
-            # "<CR>" = [ "select_and_accept" ];
-          };
+          preset = "default";
+          "<CR>" = [ "select_and_accept" ];
+          "<Tab>" = [ "select_and_accept" ];
+          "<Up>" = [ "select_prev" "fallback" ];
+          "<Down>" = [ "select_next" "fallback" ];
         };
         signature = {
           enabled = true;
@@ -39,16 +39,16 @@
             # Community
             # "dictionary"
             "emoji"
-            # "git"
+            "git"
             # "spell"
-            # "ripgrep"
+            "ripgrep"
           ];
           providers = {
-            # ripgrep = {
-            #   name = "Ripgrep";
-            #   module = "blink-ripgrep";
-            #   score_offset = 1;
-            # };
+            ripgrep = {
+              name = "Ripgrep";
+              module = "blink-ripgrep";
+              score_offset = 1;
+            };
             # dictionary = {
             #   name = "Dict";
             #   module = "blink-cmp-dictionary";
@@ -65,17 +65,17 @@
             #   module = "blink-cmp-spell";
             #   score_offset = 1;
             # };
-            # git = {
-            #   module = "blink-cmp-git";
-            #   name = "git";
-            #   score_offset = 100;
-            #   opts = {
-            #     commit = { };
-            #     git_centers = {
-            #       git_hub = { };
-            #     };
-            #   };
-            # };
+            git = {
+              module = "blink-cmp-git";
+              name = "git";
+              score_offset = 100;
+              opts = {
+                commit = { };
+                git_centers = {
+                  git_hub = { };
+                };
+              };
+            };
           };
         };
 
