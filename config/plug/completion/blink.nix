@@ -1,12 +1,12 @@
 { pkgs, ... }:
 {
-  # extraPlugins = with pkgs.vimPlugins; [
-  #   blink-ripgrep-nvim
-  # ];
-  #
-  # extraPackages = with pkgs; [
-  #   gh
-  # ];
+  extraPlugins = with pkgs.vimPlugins; [
+    blink-ripgrep-nvim
+  ];
+
+  extraPackages = with pkgs; [
+    gh
+  ];
 
   plugins = {
     # blink-cmp-dictionary.enable = true;
@@ -21,8 +21,8 @@
       settings = {
         keymap = {
           preset = "default";
-          "<CR>" = [ "select_and_accept" ];
-          "<Tab>" = [ "select_and_accept" ];
+          "<CR>" = [ "select_and_accept" "fallback" ];
+          "<Tab>" = [ "select_and_accept" "fallback" ];
           "<Up>" = [ "select_prev" "fallback" ];
           "<Down>" = [ "select_next" "fallback" ];
         };
