@@ -59,6 +59,15 @@
     }
     {
       mode = "n";
+      key = "<leader>rr";
+      action = ":Gitsigns reset_hunk<CR>";
+      options = {
+        silent = true;
+        desc = "Reset hunk";
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>gr";
       action = ":Gitsigns reset_buffer<CR>";
       options = {

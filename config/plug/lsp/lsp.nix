@@ -60,6 +60,9 @@ in
         sourcekit = {
           enable = true;
         };
+        kotlin-language-server = {
+          enable = true;
+        };
       };
       keymaps = {
         silent = true;
