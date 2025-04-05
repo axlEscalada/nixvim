@@ -9,7 +9,6 @@
       src = pkgs.fetchFromGitHub {
         owner = "axlEscalada";
         repo = "noice.nvim";
-        # rev = "a454f52b7a22874f2882674dd0e1b9c7fe9e8e79";
         rev = "5a981b5505a345e9863fceb66f093915ea3d0506";
         hash = "sha256-i/nRHndInloa1HcNtAPqfP5eK+s+Zqq3dcOeeaJObuY=";
       };
@@ -68,42 +67,18 @@
               icon = ":",
               lang = "vim",
             },
-            filter = {
-              pattern = {
-                ":%s*%%s*s:%s*",
-                ":%s*%%s*s!%s*",
-                ":%s*%%s*s/%s*",
-                "%s*s:%s*",
-                ":%s*s!%s*",
-                ":%s*s/%s*",
-              },
-              icon = "",
-              lang = "regex",
-            },
-            replace = {
-              pattern = {
-                ":%s*%%s*s:%w*:%s*",
-                ":%s*%%s*s!%w*!%s*",
-                ":%s*%%s*s/%w*/%s*",
-                "%s*s:%w*:%s*",
-                ":%s*s!%w*!%s*",
-                ":%s*s/%w*/%s*",
-              },
-              icon = "󱞪",
-              lang = "regex",
-            },
-            range = {
-              pattern = {
-                ":%s*%%s*s:%w*:%w*:%s*",
-                ":%s*%%s*s!%w*!%w*!%s*",
-                ":%s*%%s*s/%w*/%w*/%s*",
-                "%s*s:%w*:%w*:%s*",
-                ":%s*s!%w*!%w*!%s*",
-                ":%s*s/%w*/%w*/%s*",
-              },
-              icon = "",
-              lang = "regex",
-            },
+            -- filter = {
+            --   pattern = {
+            --     ":%s*%%s*s:%s*",
+            --     ":%s*%%s*s!%s*",
+            --     ":%s*%%s*s/%s*",
+            --     "%s*s:%s*",
+            --     ":%s*s!%s*",
+            --     ":%s*s/%s*",
+            --   },
+            --   icon = "",
+            --   lang = "regex",
+            -- },
           },
         },
       })
