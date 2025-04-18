@@ -1,7 +1,5 @@
 {
   imports = [
-    ./alpha.nix
-    ./btw.nix
     ./bufferline.nix
     ./dressing.nix
     ./indent-blankline.nix

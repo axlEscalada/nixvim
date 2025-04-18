@@ -2,7 +2,6 @@
   imports = [
     ./comment.nix
     ./comment-box.nix
-    ./illuminate.nix
     ./markview.nix
     ./mini.nix
     ./obsidian.nix
@@ -11,6 +10,5 @@
     ./undotree.nix
     ./whichkey.nix
     ./avante.nix
-    # ./codecompanion.nix
   ];
 }
