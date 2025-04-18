@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   plugins.none-ls = {
     enable = true;
@@ -7,7 +8,7 @@
     };
     sources = {
       code_actions = {
-        gitsigns.enable = true;
+        # gitsigns.enable = true;
         statix.enable = true;
       };
       diagnostics = {
@@ -15,7 +16,10 @@
         yamllint.enable = true;
       };
       formatting = {
-        nixpkgs_fmt.enable = true;
+        nixfmt = {
+          enable = true;
+          package = pkgs.nixfmt-rfc-style;
+        };
         black = {
           enable = true;
           settings = ''
@@ -29,12 +33,14 @@
           disableTsServerFormatter = true;
           settings = ''
             {
-              extra_args = { "--no-semi", "--single-quote" },
+              extra_args = { "--no-semi" },
             }
           '';
         };
         stylua.enable = true;
-        yamlfmt.enable = true;
+        yamlfmt = {
+          enable = true;
+        };
         hclfmt.enable = true;
       };
     };

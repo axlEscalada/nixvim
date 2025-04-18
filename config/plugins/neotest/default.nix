@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   plugins = {
-    treesitter.enable = true;
+    # treesitter.enable = true;
     neotest = {
       enable = true;
       package = pkgs.vimPlugins.neotest.overrideAttrs (old: {
