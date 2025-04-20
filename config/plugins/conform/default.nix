@@ -12,7 +12,6 @@
     };
 
     settings = {
-
       format_on_save = {
         lspFallback = true;
         timeoutMs = 500;
@@ -20,20 +19,15 @@
       notify_on_error = true;
 
       formatters_by_ft = {
-        liquidsoap = [ "liquidsoap-prettier" ];
-        go = [ "goimports" "gofmt" ];
-        html = [
-          [
-            "prettierd"
-            "prettier"
-          ]
+        python = [ "black" ];
+        go = [
+          "goimports"
+          "gofmt"
         ];
-        css = [
-          [
-            "prettierd"
-            "prettier"
-          ]
-        ];
+        lua = [ "stylua" ];
+        nix = [ "nixfmt" ];
+        markdown = [ "prettier" ];
+        yaml = [ "yamlfmt" ];
         javascript = [
           [
             "prettierd"
@@ -58,21 +52,11 @@
             "prettier"
           ]
         ];
-        python = [ "black" ];
-        lua = [ "stylua" ];
-        nix = [ "nixfmt" ];
-        markdown = [
-          [
-            "prettierd"
-            "prettier"
-          ]
-        ];
-        yaml = [
-          "yamllint"
-          "yamlfmt"
-        ];
         terragrunt = [
-          "hclfmt"
+          "hcl"
+        ];
+        bash = [
+          "shfmt"
         ];
       };
     };

@@ -424,25 +424,25 @@
   ];
   extraConfigLua = ''
     function ToggleLineNumber()
-    if vim.wo.number then
-      vim.wo.number = false
-    else
-      vim.wo.number = true
+      if vim.wo.number then
+        vim.wo.number = false
+      else
+        vim.wo.number = true
         vim.wo.relativenumber = false
-        end
-        end
+      end
+    end
 
-        function ToggleRelativeLineNumber()
-        if vim.wo.relativenumber then
-          vim.wo.relativenumber = false
-        else
-          vim.wo.relativenumber = true
-            vim.wo.number = false
-            end
-            end
+    function ToggleRelativeLineNumber()
+      if vim.wo.relativenumber then
+        vim.wo.relativenumber = false
+      else
+        vim.wo.relativenumber = true
+        vim.wo.number = false
+        end
+      end
 
-            function ToggleWrap()
-            vim.wo.wrap = not vim.wo.wrap
-            end
+    function ToggleWrap()
+      vim.wo.wrap = not vim.wo.wrap
+    end
   '';
 }

@@ -9,6 +9,7 @@ in
     };
     lsp = {
       enable = true;
+      inlayHints = true;
       servers = {
         clangd = {
           enable = true;
@@ -39,7 +40,7 @@ in
         terraformls = {
           enable = true;
         };
-        ruff-lsp.enable = true;
+        ruff.enable = true;
         rust-analyzer = {
           enable = true;
           installCargo = true;
@@ -132,9 +133,9 @@ in
       }
     )
 
-    vim.diagnostic.config{
-      float={border=_border}
-    };
+    -- vim.diagnostic.config{
+    --   float={border=_border}
+    -- };
 
     require('lspconfig.ui.windows').default_options = {
       border = _border

@@ -123,7 +123,7 @@
     }
     {
       mode = "n";
-      key = "<leader>fw";
+      key = "<leader>/";
       action = "<cmd>lua Snacks.picker.grep()<cr>";
       options = {
         desc = "Live grep";
