@@ -1,11 +1,9 @@
 {
-  config,
   pkgs,
   ...
 }:
 {
   extraPlugins = with pkgs.vimPlugins; [
-    # blink-cmp-copilot
     blink-ripgrep-nvim
   ];
 
@@ -14,13 +12,11 @@
   ];
 
   plugins = {
-    # blink-cmp-copilot.enable = !config.plugins.blink-copilot.enable;
-    blink-cmp-dictionary.enable = true;
-    blink-cmp-spell.enable = true;
-    # blink-copilot.enable = true;
-    blink-cmp-git.enable = true;
-    blink-emoji.enable = true;
-    blink-ripgrep.enable = true;
+    # blink-cmp-dictionary.enable = true;
+    # blink-cmp-spell.enable = true;
+    # blink-cmp-git.enable = true;
+    # blink-emoji.enable = true;
+    # blink-ripgrep.enable = true;
     blink-cmp = {
       enable = true;
       setupLspCapabilities = true;
@@ -56,52 +52,45 @@
             "path"
             "snippets"
             # Community
-            # "copilot"
-            "dictionary"
-            "emoji"
-            "git"
-            "spell"
-            "ripgrep"
+            # "dictionary"
+            # "emoji"
+            # "git"
+            # "spell"
+            # "ripgrep"
           ];
           providers = {
-            ripgrep = {
-              name = "Ripgrep";
-              module = "blink-ripgrep";
-              score_offset = 1;
-            };
-            dictionary = {
-              name = "Dict";
-              module = "blink-cmp-dictionary";
-              min_keyword_length = 3;
-            };
-            emoji = {
-              name = "Emoji";
-              module = "blink-emoji";
-              score_offset = 1;
-            };
-            # copilot = {
-            #   name = "copilot";
-            #   module = "blink-copilot";
-            #   async = true;
-            #   score_offset = 100;
+            lsp.score_offset = 1;
+            # ripgrep = {
+            #   name = "Ripgrep";
+            #   module = "blink-ripgrep";
+            #   score_offset = 2;
             # };
-            lsp.score_offset = 4;
-            spell = {
-              name = "Spell";
-              module = "blink-cmp-spell";
-              score_offset = 1;
-            };
-            git = {
-              module = "blink-cmp-git";
-              name = "git";
-              score_offset = 100;
-              opts = {
-                commit = { };
-                git_centers = {
-                  git_hub = { };
-                };
-              };
-            };
+            # dictionary = {
+            #   name = "Dict";
+            #   module = "blink-cmp-dictionary";
+            #   min_keyword_length = 3;
+            # };
+            # emoji = {
+            #   name = "Emoji";
+            #   module = "blink-emoji";
+            #   score_offset = 5;
+            # };
+            # spell = {
+            #   name = "Spell";
+            #   module = "blink-cmp-spell";
+            #   score_offset = 1;
+            # };
+            # git = {
+            #   module = "blink-cmp-git";
+            #   name = "git";
+            #   score_offset = 100;
+            #   opts = {
+            #     commit = { };
+            #     git_centers = {
+            #       git_hub = { };
+            #     };
+            #   };
+            # };
           };
         };
 
