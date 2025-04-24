@@ -21,7 +21,7 @@
           text = "~";
         };
         untracked = {
-          text = "│";
+          text = "┆";
         };
       };
     };

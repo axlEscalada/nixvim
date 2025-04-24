@@ -62,6 +62,16 @@
         };
       };
 
+      custom_highlights = {
+        GitSignsAdd = {
+          fg = "#6d5cb8";
+        };
+
+        GitSignsChange = {
+          fg = "#ddba6e";
+        };
+      };
+
       integrations = {
         aerial = true;
         blink_cmp = true;

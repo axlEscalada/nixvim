@@ -1,7 +1,7 @@
 {
-  # imports = [
-  #   ./diffview.nix
-  #   ./gitlinker.nix
-  #   ./gitsigns.nix
-  # ];
+  imports = [
+    ./diffview.nix
+    ./gitlinker.nix
+    ./gitsigns.nix
+  ];
 }
