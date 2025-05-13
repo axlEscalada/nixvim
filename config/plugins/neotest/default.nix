@@ -21,6 +21,10 @@
           ];
         };
       };
+      # Add JavaScript/TypeScript neotest adapter
+      adapters.jest = {
+        enable = true;
+      };
     };
 
     #go install github.com/go-delve/delve/cmd/dlv@latest
@@ -36,7 +40,13 @@
 
   extraPlugins = with pkgs.vimPlugins; [
     FixCursorHold-nvim
+    nvim-dap-vscode-js
   ];
+
+  globals = {
+    nodejs_bin = "${pkgs.nodejs}/bin/node";
+    vscode_js_debug_path = "${pkgs.vscode-js-debug}";
+  };
 
   extraConfigLua = ''
     local dap = require("dap")
@@ -54,7 +64,74 @@
       dapui.close({})
     end
 
-    vim.fn.sign_define("DapStopped", { text="", texthl="DapStopped", linehl="DapStopped", numhl="DapStopped" })
+    vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
+    vim.fn.sign_define("DapBreakpoint", { text = "●", texthl = "DiagnosticError", linehl = "", numhl = "" })
+    vim.fn.sign_define("DapBreakpointCondition", { text = "●", texthl = "DiagnosticWarn", linehl = "", numhl = "" })
+    vim.fn.sign_define("DapLogPoint", { text = "◆", texthl = "DiagnosticInfo", linehl = "", numhl = "" })
+    vim.fn.sign_define("DapStopped", { text = "▶", texthl = "DiagnosticInfo", linehl = "DapStoppedLine", numhl = "DapStoppedLine" })
+    vim.fn.sign_define("DapBreakpointRejected", { text = "○", texthl = "DiagnosticError", linehl = "", numhl = "" })
+
+    -- Configure js-debug server
+    dap.adapters["pwa-node"] = {
+      type = "server",
+      host = "localhost",
+      port = 9123,
+      executable = {
+        command = "node",
+        args = {
+          vim.g.vscode_js_debug_path .. "/lib/node_modules/js-debug/dist/src/dapDebugServer.js",
+          "9123"
+        }
+      }
+    }
+
+    -- Configure adapters with aliases
+    dap.adapters["node"] = dap.adapters["pwa-node"]
+    dap.adapters["pwa-chrome"] = dap.adapters["pwa-node"]
+    dap.adapters["chrome"] = dap.adapters["pwa-node"]
+    dap.adapters["pwa-msedge"] = dap.adapters["pwa-node"]
+    dap.adapters["node-terminal"] = dap.adapters["pwa-node"]
+
+    -- Configure Node.js debugging
+    for _, language in ipairs({ "typescript", "javascript", "typescriptreact", "javascriptreact", "vue" }) do
+      dap.configurations[language] = {
+        -- Debug with ts-node (for TypeScript files)
+        {
+          type = "pwa-node",
+          request = "launch",
+          name = "Debug with ts-node",
+          runtimeExecutable = "npx",
+          runtimeArgs = { "ts-node", "''${file}" },
+          cwd = "''${workspaceFolder}",
+          sourceMaps = true,
+          skipFiles = { "<node_internals>/**" },
+          console = "integratedTerminal",
+        },
+        -- Debug compiled JS files
+        {
+          type = "pwa-node",
+          request = "launch",
+          name = "Debug JS file",
+          program = "''${file}",
+          cwd = "''${workspaceFolder}",
+          sourceMaps = true,
+          outFiles = { "''${workspaceFolder}/**/*.js" },
+          console = "integratedTerminal",
+        },
+        -- Attach to running Node.js process
+        {
+          type = "pwa-node",
+          request = "attach",
+          name = "Attach to process",
+          processId = require("dap.utils").pick_process,
+          cwd = "''${workspaceFolder}",
+          sourceMaps = true,
+        },
+      }
+    end
+
+    -- Configure direct mapping for node as well
+    dap.configurations["node"] = dap.configurations["javascript"]
   '';
 
   # Keymaps for Neotest
@@ -274,6 +351,25 @@
       key = "<leader>de";
       action = ":lua require('dapui').eval()<CR>";
       options.desc = "[d]ap [e]val";
+    }
+
+    # Load launch.json and run
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<leader>da";
+      action.__raw = ''
+        function()
+          if vim.fn.filereadable(".vscode/launch.json") then
+            require("dap.ext.vscode").load_launchjs()
+            print("Loaded launch.json")
+          end
+          require("dap").continue()
+        end
+      '';
+      options.desc = "Debug with Launch.json";
     }
   ];
 }
