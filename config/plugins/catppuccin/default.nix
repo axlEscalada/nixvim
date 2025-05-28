@@ -70,6 +70,10 @@
         GitSignsChange = {
           fg = "#ddba6e";
         };
+
+        LineNR = {
+          fg = "#474f6c";
+        };
       };
 
       integrations = {
