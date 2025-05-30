@@ -19,6 +19,9 @@
       number = true;
       relativenumber = true;
 
+      # Set a line between line numbers and code editor
+      statuscolumn = "%s%l │";
+
       # Wider cursor in all modes
       guicursor = "n-v-c-sm:block,i-ci-ve:block,r-cr-o:block";
 
