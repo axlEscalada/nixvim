@@ -13,7 +13,7 @@
             corner_top = "╭";
             corner_bottom = "╰";
           };
-          hl = "SnacksIndentScope";
+          hl = "SnacksIndentChunk";
         };
       };
     };

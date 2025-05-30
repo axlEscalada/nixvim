@@ -72,15 +72,17 @@
         };
 
         GitSignsCurrentLineBlame = {
-          fg = "#666e7f";
+          fg = "#666e7f"; # for GhosttyCustom theme
+          # fg = "#4f5663"; # for BatmanBlueCustom theme
         };
 
         LineNR = {
-          fg = "#474f6c";
+          fg = "#515a7b";
         };
 
         CursorLine = {
-          bg = "#393d47";
+          bg = "#393d47"; # for GhosttyCustom theme
+          # bg = "#292c33";
         };
 
       };
