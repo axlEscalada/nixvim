@@ -74,6 +74,11 @@
         LineNR = {
           fg = "#474f6c";
         };
+
+        CursorLine = {
+          bg = "#393d47";
+        };
+
       };
 
       integrations = {
