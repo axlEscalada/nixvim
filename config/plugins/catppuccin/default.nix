@@ -48,7 +48,7 @@
           teal = "#9cd1bb";
           sky = "#A6C9E5";
           sapphire = "#86AACC";
-          blue = "#5d81ab";
+          blue = "#e6e6e6"; # Changed to white/grey
           lavender = "#66729C";
           mauve = "#b18eab";
 
