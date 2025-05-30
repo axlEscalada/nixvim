@@ -71,6 +71,10 @@
           fg = "#ddba6e";
         };
 
+        GitSignsCurrentLineBlame = {
+          fg = "#666e7f";
+        };
+
         LineNR = {
           fg = "#474f6c";
         };
