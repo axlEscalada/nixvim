@@ -72,6 +72,15 @@
   keymaps = [
     {
       mode = "n";
+      key = "<leader>lo";
+      action = "<cmd>Lspsaga outline<CR>";
+      options = {
+        desc = "Lspsaga outline";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
       key = "gd";
       action = "<cmd>Lspsaga finder def<CR>";
       options = {
@@ -79,6 +88,14 @@
         silent = true;
       };
     }
+    # shuttle = '[w' shuttle bettween the finder layout window
+    # toggle_or_open = 'o' toggle expand or open
+    # vsplit = 's' open in vsplit
+    # split = 'i' open in split
+    # tabe = 't' open in tabe
+    # tabnew = 'r' open in new tab
+    # quit = 'q' quit the finder, only works in layout left window
+    # close = '<C-c>k' close finder
     {
       mode = "n";
       key = "gr";
@@ -128,17 +145,6 @@
         silent = true;
       };
     }
-
-    {
-      mode = "n";
-      key = "<leader>cw";
-      action = "<cmd>Lspsaga outline<CR>";
-      options = {
-        desc = "Outline";
-        silent = true;
-      };
-    }
-
     {
       mode = "n";
       key = "<leader>cr";
@@ -158,7 +164,6 @@
         silent = true;
       };
     }
-
     {
       mode = "n";
       key = "<leader>cd";
