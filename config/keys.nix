@@ -423,6 +423,12 @@
     }
   ];
   extraConfigLua = ''
+    -- Disable default LSP mappings that conflict with your custom ones
+    pcall(vim.keymap.del, "n", "gra")
+    pcall(vim.keymap.del, "n", "gri")
+    pcall(vim.keymap.del, "n", "grn")
+    pcall(vim.keymap.del, "n", "grr")
+
     function ToggleLineNumber()
       if vim.wo.number then
         vim.wo.number = false
