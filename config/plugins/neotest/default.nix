@@ -92,46 +92,6 @@
     dap.adapters["pwa-msedge"] = dap.adapters["pwa-node"]
     dap.adapters["node-terminal"] = dap.adapters["pwa-node"]
 
-    -- Configure Node.js debugging
-    for _, language in ipairs({ "typescript", "javascript", "typescriptreact", "javascriptreact", "vue" }) do
-      dap.configurations[language] = {
-        -- Debug with ts-node (for TypeScript files)
-        {
-          type = "pwa-node",
-          request = "launch",
-          name = "Debug with ts-node",
-          runtimeExecutable = "npx",
-          runtimeArgs = { "ts-node", "''${file}" },
-          cwd = "''${workspaceFolder}",
-          sourceMaps = true,
-          skipFiles = { "<node_internals>/**" },
-          console = "integratedTerminal",
-        },
-        -- Debug compiled JS files
-        {
-          type = "pwa-node",
-          request = "launch",
-          name = "Debug JS file",
-          program = "''${file}",
-          cwd = "''${workspaceFolder}",
-          sourceMaps = true,
-          outFiles = { "''${workspaceFolder}/**/*.js" },
-          console = "integratedTerminal",
-        },
-        -- Attach to running Node.js process
-        {
-          type = "pwa-node",
-          request = "attach",
-          name = "Attach to process",
-          processId = require("dap.utils").pick_process,
-          cwd = "''${workspaceFolder}",
-          sourceMaps = true,
-        },
-      }
-    end
-
-    -- Configure direct mapping for node as well
-    dap.configurations["node"] = dap.configurations["javascript"]
   '';
 
   # Keymaps for Neotest
