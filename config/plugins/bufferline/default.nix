@@ -1,6 +1,15 @@
 { config, lib, ... }:
 {
   plugins = {
+    mini = {
+      enable = true;
+      modules = {
+        icons = {
+          style = "glyph";
+        };
+      };
+      mockDevIcons = true; # This makes mini.icons compatible with plugins that expect nvim-web-devicons
+    };
     bufferline = {
       enable = true;
       settings = {
@@ -26,7 +35,8 @@
             truncate_names = false,
             tab_size = 15,
             diagnostics = false,
-            show_buffer_icons = false,
+            show_buffer_icons = true,
+            color_icons = true,
             show_buffer_close_icons = true,
             show_close_icon = true,
             show_tab_indicators = false,
