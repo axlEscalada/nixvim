@@ -11,7 +11,8 @@
     ./indent.nix
     ./lazygit.nix
     ./notifier.nix
-    ./picker.nix
+    ./fzf-lua.nix
+    # ./picker.nix
   ];
 
 }

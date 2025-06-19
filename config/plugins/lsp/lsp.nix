@@ -52,9 +52,9 @@ in
         elixirls = {
           enable = true;
         };
-        gleam = {
-          enable = true;
-        };
+        # gleam = {
+        #   enable = true;
+        # };
         tsserver = {
           enable = true;
         };
