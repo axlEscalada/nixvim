@@ -85,6 +85,16 @@
           # bg = "#292c33";
         };
 
+        "CustomLoggerVar" = {
+          fg = "#e6e6e6";
+          style = [ "bold" ];
+        };
+
+        "CustomLoggerMethod" = {
+          fg = "#9cd1bb";
+          style = [ "bold" ];
+        };
+
       };
 
       integrations = {

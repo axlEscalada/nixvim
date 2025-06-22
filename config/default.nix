@@ -18,5 +18,6 @@ in
       ./autocmd.nix
       ./keys.nix
       ./sets.nix
+      ./treesitter-queries.nix
     ];
 }

@@ -76,7 +76,7 @@ in
             action = "references";
             desc = "Goto References";
           };
-          gD = {
+          glD = {
             action = "declaration";
             desc = "Goto Declaration";
           };

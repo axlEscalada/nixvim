@@ -82,7 +82,7 @@
     {
       mode = "n";
       key = "gd";
-      action = "<cmd>Lspsaga finder def<CR>";
+      action = "<cmd>Lspsaga goto_definition<CR>";
       options = {
         desc = "Goto Definition";
         silent = true;
@@ -99,7 +99,7 @@
     {
       mode = "n";
       key = "gr";
-      action = "<cmd>Lspsaga finder ref<CR>";
+      action = "m'<cmd>Lspsaga finder ref<CR>";
       options = {
         desc = "Goto References";
         silent = true;
@@ -119,7 +119,7 @@
     {
       mode = "n";
       key = "gI";
-      action = "<cmd>Lspsaga finder imp<CR>";
+      action = "m'<cmd>Lspsaga finder imp<CR>";
       options = {
         desc = "Goto Implementation";
         silent = true;

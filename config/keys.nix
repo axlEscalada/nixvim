@@ -421,6 +421,14 @@
         desc = "Delete buffer";
       };
     }
+    {
+      mode = "n";
+      key = "<M-i>";
+      action = "<C-i>";
+      options = {
+        desc = "Jump forward";
+      };
+    }
   ];
   extraConfigLua = ''
     -- Disable default LSP mappings that conflict with your custom ones
