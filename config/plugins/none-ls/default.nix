@@ -2,7 +2,7 @@
 {
   plugins.none-ls = {
     enable = true;
-    enableLspFormat = true;
+    enableLspFormat = false;
     settings = {
       updateInInsert = false;
     };
@@ -28,15 +28,15 @@
             }
           '';
         };
-        prettier = {
-          enable = true;
-          disableTsServerFormatter = true;
-          settings = ''
-            {
-              extra_args = { "--no-semi" },
-            }
-          '';
-        };
+        # prettier = {
+        #   enable = true;
+        #   disableTsServerFormatter = true;
+        #   settings = ''
+        #     {
+        #       extra_args = { "--no-semi" },
+        #     }
+        #   '';
+        # };
         stylua.enable = true;
         yamlfmt = {
           enable = true;
