@@ -179,14 +179,6 @@
     }
     {
       mode = "n";
-      key = "<leader>ff";
-      action = ''<cmd>lua Snacks.picker.files()<cr>'';
-      options = {
-        desc = "Find files";
-      };
-    }
-    {
-      mode = "n";
       key = "<leader><space>";
       action = ''<cmd>lua Snacks.picker.files()<cr>'';
       options = {

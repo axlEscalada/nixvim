@@ -7,15 +7,19 @@
     lazyLoad.settings = {
       cmd = [
         "ConformInfo"
+        "ConformFormat"
       ];
-      event = [ "BufWritePre" ];
+      event = [
+        "BufRead"
+        "BufNewFile"
+      ];
     };
 
     settings = {
-      format_on_save = {
-        lspFallback = true;
-        timeoutMs = 500;
-      };
+      # format_on_save = {
+      #   lspFallback = true;
+      #   timeoutMs = 500;
+      # };
       notify_on_error = true;
 
       formatters_by_ft = {
@@ -57,4 +61,15 @@
       };
     };
   };
+  keymaps = [
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<leader>ff";
+      action = "<cmd>lua require('conform').format({ lsp_fallback = true })<cr>";
+      options.desc = "Format buffer";
+    }
+  ];
 }

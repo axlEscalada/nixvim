@@ -177,12 +177,6 @@
             desc = "Find open buffers";
           };
         };
-        "<leader>ff" = {
-          action = "files";
-          options = {
-            desc = "Find files";
-          };
-        };
         "<leader><space>" = {
           action = "files";
           options = {
