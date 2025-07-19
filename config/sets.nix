@@ -23,8 +23,8 @@
       statuscolumn = "%s%l │";
 
       # Wider cursor in all modes
-      guicursor = "n-v-c-sm:block,i-ci-ve:block,r-cr-o:block";
-      # guicursor = "n-v-c-sm:block,i-ci-ve:ver1,r-cr-o:hor1";
+      # guicursor = "n-v-c-sm:block,i-ci-ve:block,r-cr-o:block";
+      guicursor = "n-v-c-sm:block,i-ci-ve:ver1,r-cr-o:hor1";
 
       # Set tabs to 2 spaces
       tabstop = 2;
