@@ -90,6 +90,24 @@
             desc = "Find autocmds";
           };
         };
+        "<leader>fe" = {
+          action = "diagnostics_document";
+          settings = {
+            severity_only = "error";
+          };
+          options = {
+            desc = "Find buffer error diagnostics";
+          };
+        };
+        "<leader>fE" = {
+          action = "diagnostics_workspace";
+          settings = {
+            severity_only = "error";
+          };
+          options = {
+            desc = "Find workspace error diagnostics";
+          };
+        };
         "<leader>fd" = {
           action = "diagnostics_document";
           options = {

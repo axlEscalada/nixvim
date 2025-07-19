@@ -47,7 +47,7 @@
 
         sources = {
           default = [
-            "buffer"
+            # "buffer"
             "lsp"
             "path"
             "snippets"

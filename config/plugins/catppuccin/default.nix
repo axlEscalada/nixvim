@@ -63,6 +63,18 @@
       };
 
       custom_highlights = {
+        SnacksIndentScope = {
+          fg = "#e1e1e1";
+        };
+
+        SnacksIndent1 = {
+          fg = "#1e1e2e"; # Replace with your actual background color
+        };
+
+        SnacksIndent2 = {
+          fg = "#1e1e2e"; # Replace with your actual background color
+        };
+
         GitSignsAdd = {
           fg = "#6d5cb8";
         };
