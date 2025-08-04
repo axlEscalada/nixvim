@@ -1,6 +1,8 @@
 {
   plugins.indent-blankline = {
-    enable = true;
+    # disable because it collition with cursor_invert_fg_bg (ghostty)
+    # it just turn "black" cursor when there is a indent line
+    enable = false;
     settings = {
       indent = {
         # char = "│";
