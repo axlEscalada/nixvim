@@ -436,6 +436,7 @@
     pcall(vim.keymap.del, "n", "gri")
     pcall(vim.keymap.del, "n", "grn")
     pcall(vim.keymap.del, "n", "grr")
+    pcall(vim.keymap.del, "n", "grt")
 
     function ToggleLineNumber()
       if vim.wo.number then

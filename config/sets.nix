@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   config = {
     colorscheme = "catppuccin";
@@ -12,7 +13,7 @@
     };
     clipboard = {
       register = "unnamedplus";
-      providers.wl-copy.enable = true;
+      providers.wl-copy.enable = pkgs.stdenv.isLinux;
     };
     opts = {
       # Enable relative line numbers
