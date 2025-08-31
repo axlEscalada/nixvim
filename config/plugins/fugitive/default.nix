@@ -48,7 +48,7 @@
   ];
 
   # Improve diff experience
-  opts = {
-    diffopt = "internal,filler,closeoff,hiddenoff,algorithm:patience,indent-heuristic";
-  };
+  # opts = {
+  #   diffopt = "internal,filler,closeoff,hiddenoff,algorithm:patience,indent-heuristic";
+  # };
 }
