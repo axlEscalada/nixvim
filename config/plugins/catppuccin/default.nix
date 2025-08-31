@@ -89,7 +89,7 @@
         };
 
         LineNR = {
-          fg = "#515a7b";
+          fg = "#7683b3";
         };
 
         CursorLine = {
