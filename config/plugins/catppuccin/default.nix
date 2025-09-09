@@ -88,11 +88,11 @@
         };
 
         LineNR = {
-          bg = "#8491b3";
+          fg = "#8491b3";
         };
 
         CursorLineNR = {
-          bg = "#b0c0e8";
+          fg = "#b0c0e8";
         };
 
         CursorLine = {
