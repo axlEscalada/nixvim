@@ -88,11 +88,15 @@
         };
 
         LineNR = {
-          fg = "#7683b3";
+          bg = "#8491b3";
+        };
+
+        CursorLineNR = {
+          bg = "#b0c0e8";
         };
 
         CursorLine = {
-          bg = "#b0c0e8";
+          bg = "#393d47";
         };
 
         "CustomLoggerVar" = {
