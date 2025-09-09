@@ -84,8 +84,7 @@
         };
 
         GitSignsCurrentLineBlame = {
-          fg = "#666e7f"; # for GhosttyCustom theme
-          # fg = "#4f5663"; # for BatmanBlueCustom theme
+          fg = "#666e7f";
         };
 
         LineNR = {
@@ -93,8 +92,7 @@
         };
 
         CursorLine = {
-          bg = "#393d47"; # for GhosttyCustom theme
-          # bg = "#292c33";
+          bg = "#b0c0e8";
         };
 
         "CustomLoggerVar" = {
