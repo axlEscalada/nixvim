@@ -2,6 +2,15 @@
   globals.mapleader = " ";
 
   keymaps = [
+    # disable space's default behavior
+    {
+      mode = "n";
+      key = "<Space>";
+      action = "<Nop>";
+      options = {
+        desc = "Disable space default behavior";
+      };
+    }
     # General maps
     {
       mode = "n";

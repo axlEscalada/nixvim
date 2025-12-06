@@ -14,7 +14,7 @@
         bash = [ "shellcheck" ];
         fish = [ "fish" ];
         go = [ "golangcilint" ];
-        json = [ "jsonlint" ];
+        json = [ "jq" ];
         lua = [ "luacheck" ];
         markdown = [ "markdownlint" ];
         nix = [
@@ -40,8 +40,8 @@
         golangcilint = {
           cmd = lib.getExe pkgs.golangci-lint;
         };
-        jsonlint = {
-          cmd = lib.getExe pkgs.nodePackages.jsonlint;
+        jq = {
+          cmd = lib.getExe pkgs.jq;
         };
         luacheck = {
           cmd = lib.getExe pkgs.luaPackages.luacheck;

@@ -32,5 +32,13 @@ vimUtils.buildVimPlugin {
     "snacks.image.placement"
     "snacks.image.image"
     "snacks.image.convert"
+    # Add the failing modules from the error:
+    "snacks.picker.util.diff"
+    "snacks.picker.source.gh"
+    "snacks.gh.render.init"
+    "snacks.gh.actions"
+    "snacks.gh.init"
+    "snacks.gh.buf"
+    "snacks.explorer.init"
   ];
 }

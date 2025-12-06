@@ -59,7 +59,7 @@ in
           enable = true;
         };
         sourcekit = {
-          enable = true;
+          enable = false;
         };
         kotlin-language-server = {
           enable = true;
